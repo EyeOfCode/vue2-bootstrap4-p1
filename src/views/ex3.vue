@@ -5,35 +5,33 @@
       <p class="ml-2">Photo (components, props)</p>
     </div>
     <div>
-      <form @submit.prevent="handleSubmit">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            v-model="formData.name"
-          />
-        </div>
-        <div class="form-group">
-          <label for="age">Age</label>
-          <input
-            type="text"
-            class="form-control"
-            id="age"
-            v-model="formData.age"
-          />
-        </div>
-        <div class="form-group">
-          <label for="imageUrl">Image Url</label>
-          <input
-            type="text"
-            class="form-control"
-            id="imageUrl"
-            v-model="formData.imageUrl"
-          />
-        </div>
-      </form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          v-model="formData.name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input
+          type="text"
+          class="form-control"
+          id="age"
+          v-model="formData.age"
+        />
+      </div>
+      <div class="form-group">
+        <label for="imageUrl">Image Url</label>
+        <input
+          type="text"
+          class="form-control"
+          id="imageUrl"
+          v-model="formData.imageUrl"
+        />
+      </div>
     </div>
     <div class="my-4">
       <UserPreview :formData="formData" />
