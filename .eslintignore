@@ -1,0 +1,11 @@
+node_modules
+dist
+public
+
+# ignore files
+.DS_Store
+.eslintrc.js
+.gitignore
+.prettierrc
+babel.config.js
+vue.config.js

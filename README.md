@@ -24,6 +24,12 @@ npm run build
 npm run lint
 ```
 
+### Lints and fixes files
+
+```
+npm run format
+```
+
 ### stack
 
 - vue2 js
