@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">VueJs 2 Bootstrap 4</a>
+    <a class="navbar-brand" href="/">VueJs 2 Bootstrap 4</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -12,7 +12,7 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNav" @click="closeMenu">
       <ul class="navbar-nav">
         <li class="nav-item">
           <router-link class="nav-link" to="/" exact-active-class="active">
@@ -33,6 +33,18 @@
     </div>
   </nav>
 </template>
+
+<script>
+export default {
+  name: 'Navbar',
+  methods: {
+    closeMenu() {
+      const navbar = document.getElementById('navbarNav');
+      navbar.classList.remove('show');
+    },
+  },
+};
+</script>
 
 <style scoped>
 .active {
