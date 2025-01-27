@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Ex1 from '@/views/ex1.vue';
 import Ex2 from '@/views/ex2.vue';
+import Ex3 from '@/views/ex3.vue';
 
 Vue.use(VueRouter);
 
@@ -20,6 +21,14 @@ const routes = [
     component: Ex2,
     meta: {
       title: 'Exercise 2',
+    },
+  },
+  {
+    path: '/ex3',
+    name: 'Ex3',
+    component: Ex3,
+    meta: {
+      title: 'Exercise 3',
     },
   },
 ];
