@@ -1,26 +1,28 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '@/views/Home.vue';
-import About from '@/views/About.vue';
+import Ex1 from '@/views/ex1.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Ex1',
+    component: Ex1,
+    meta: {
+      title: 'Exercise 1',
+    },
   },
-  {
-    path: '/about',
-    name: 'About',
-    component: About
-  }
 ];
 
 const router = new VueRouter({
   mode: 'history',
-  routes
+  routes,
+});
+
+router.beforeEach((to, _from, next) => {
+  document.title = to.meta.title || 'Vue 2 + Bootstrap 4';
+  next();
 });
 
 export default router;
