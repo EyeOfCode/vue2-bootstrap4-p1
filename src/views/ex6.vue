@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="d-flex">
-      <p class="font-weight-bold">Exercise 5</p>
-      <p class="ml-2">Products (components & array data)</p>
+      <p class="font-weight-bold">Exercise 6</p>
+      <p class="ml-2">Products (components & array data & deleted item)</p>
     </div>
     <div class="row mt-4">
       <div class="col-md-8 col-12">
@@ -17,6 +17,7 @@
               :name="product.name"
               :no="product.no"
               @updateName="updateProductName(product.id, $event)"
+              :deleteItem="deleteItem"
             />
           </div>
         </div>
@@ -36,7 +37,7 @@ import ItemList from '@/components/ItemList.vue';
 import ProductCard from '@/components/ProductCard.vue';
 
 export default {
-  name: 'Ex5',
+  name: 'Ex6',
   components: {
     ProductCard,
     ItemList,
@@ -53,8 +54,8 @@ export default {
   methods: {
     addItem() {
       this.products.push({
-        id: this.products.length + 1,
         no: this.products.length + 1,
+        id: this.products.length + 1,
         name: '',
       });
     },
@@ -63,6 +64,15 @@ export default {
       if (product) {
         product.name = newName;
       }
+    },
+    deleteItem(productId) {
+      const newData = this.products.filter(
+        (product) => product.id !== productId
+      );
+      this.products = newData.map((product, index) => ({
+        ...product,
+        no: index + 1,
+      }));
     },
   },
 };

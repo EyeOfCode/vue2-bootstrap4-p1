@@ -1,6 +1,7 @@
 <template>
   <div class="card shadow-sm mb-4">
     <div class="card-body">
+      <p>No: {{ no }}</p>
       <p>Item ID: {{ id }}</p>
       <div class="form-group">
         <label for="itemName">Item Name</label>
@@ -13,6 +14,9 @@
           :value="name"
         />
       </div>
+      <div class="d-flex justify-content-end" v-if="deleteItem">
+        <button class="btn btn-danger" @click="deleteItem(id)">Delete</button>
+      </div>
     </div>
   </div>
 </template>
@@ -21,6 +25,10 @@
 export default {
   name: 'ProductCard',
   props: {
+    no: {
+      type: Number,
+      required: true,
+    },
     id: {
       type: Number,
       required: true,
@@ -28,6 +36,10 @@ export default {
     name: {
       type: String,
       default: '',
+    },
+    deleteItem: {
+      type: Function,
+      default: null,
     },
   },
   methods: {
