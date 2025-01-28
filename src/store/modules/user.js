@@ -22,7 +22,7 @@ export default {
       try {
         commit('setError', null);
 
-        const response = await Vue.prototype.$apiUser.get('/userFormData.json');
+        const response = await Vue.prototype.$baseApi.get('/userFormData.json');
         commit('setUser', response.data);
 
         return response.data;
@@ -36,7 +36,7 @@ export default {
       try {
         commit('setError', null);
 
-        const response = await Vue.prototype.$apiUser.put(
+        const response = await Vue.prototype.$baseApi.put(
           '/userFormData.json',
           userData
         );

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import axios from 'axios';
 
-const apiUser = axios.create({
+const baseApi = axios.create({
   baseURL: process.env.VUE_APP_API_URL || 'http://localhost:8000',
   timeout: 10000,
   headers: {
@@ -10,6 +10,6 @@ const apiUser = axios.create({
   },
 });
 
-Vue.prototype.$apiUser = apiUser;
+Vue.prototype.$baseApi = baseApi;
 
-export { apiUser };
+export { baseApi };
