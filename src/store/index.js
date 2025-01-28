@@ -1,23 +1,11 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import user from './modules/user';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-    message: 'Hello, Vuex!',
-  },
-  mutations: {
-    setMessage(state, newMessage) {
-      state.message = newMessage;
-    },
-  },
-  actions: {
-    updateMessage({ commit }, newMessage) {
-      commit('setMessage', newMessage);
-    },
-  },
-  getters: {
-    message: (state) => state.message,
+  modules: {
+    user,
   },
 });

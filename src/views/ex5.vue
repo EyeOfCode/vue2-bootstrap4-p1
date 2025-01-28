@@ -53,7 +53,7 @@ export default {
   methods: {
     addItem() {
       this.products.push({
-        id: this.products.length + 1,
+        id: this.products.at(-1).id + 1,
         no: this.products.length + 1,
         name: '',
       });

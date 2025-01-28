@@ -44,6 +44,11 @@
             Exercise 6
           </router-link>
         </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/ex7" active-class="active">
+            Exercise 7
+          </router-link>
+        </li>
       </ul>
     </div>
   </nav>

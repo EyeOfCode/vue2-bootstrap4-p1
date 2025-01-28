@@ -1,9 +1,9 @@
 module.exports = {
-  extends: [
-    'plugin:vue/essential',
-    'eslint:recommended',
-  ],
+  extends: ['plugin:vue/essential', 'eslint:recommended'],
   rules: {
     'vue/multi-word-component-names': 'off',
+  },
+  env: {
+    node: true,
   },
 };

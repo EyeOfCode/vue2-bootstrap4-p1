@@ -38,6 +38,9 @@ npm run format
 - prettier
 - vue-router
 - vuex
+- sweetalert2
+- vue-sweetalert2
+- axios
 
 ### todo
 
