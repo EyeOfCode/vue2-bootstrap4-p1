@@ -7,7 +7,12 @@
       <div class="my-2">
         <p class="m-0">Name: {{ formData.name }}</p>
         <p class="m-0 mb-2">Age: {{ formData.age }}</p>
-        <img v-if="formData.imageUrl" :src="formData.imageUrl" alt />
+        <img
+          class="w-100 p-4"
+          v-if="formData.imageUrl"
+          :src="formData.imageUrl"
+          alt
+        />
       </div>
     </div>
   </div>

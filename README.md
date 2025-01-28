@@ -45,7 +45,7 @@ npm run format
 - [x] ex2 Regsiter Form (v-model)
 - [x] ex3 Photo (components, props)
 - [x] ex4 Photos (components, ref)
-- [ ] ex5 Products (components & array data)
+- [x] ex5 Products (components & array data)
 - [ ] ex6 Products (components & array data)
 - [ ] ex7 Regsiter Form (API)
 - [ ] ex8 Shopping Cart
